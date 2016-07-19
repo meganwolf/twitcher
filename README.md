@@ -9,10 +9,10 @@ This project aims to narrow down Twitter searches to a specific profile / feed w
 
 ## Code Example
 Get the user's tweets:
-    > user_tweets = t.get_user_timeline(screen_name=twitter_handle, include_rts=True, count=200)
+user_tweets = t.get_user_timeline(screen_name=twitter_handle, include_rts=True, count=200)
 
 RegEx format:
-     > regex = '"text": "([^"]*(term1|term2|term3|term4|term5|term6)[^"]*)'
+regex = '"text": "([^"]*(term1|term2|term3|term4|term5|term6)[^"]*)'
 
 ## Motivation
 
@@ -21,21 +21,21 @@ According to Time (http://time.com/money/3510967/jobvite-social-media-profiles-j
 ## Installation
 
 To run in terminal: 
-     pip install twython 
-     pip install simplejson
+pip install twython 
+pip install simplejson
 
-imported libaries:
+Imported Libraries for terminal:
 from twython import Twython
 import simplejson
-from re import findall
 import re
+import Werkzeug
 
 For Flask:
     <p>pip install werkzeug</p>
     <p>pip install flask</p>
     <p>pip install flask-boostrap</p>
 
-imported libraries: 
+Imported Libraries for Flask: 
     <p>from flask import Flask, render_template, request</p>
     <p>from werkzeug import routing</p>
 
@@ -44,8 +44,7 @@ imported libraries:
 Twitter API https://dev.twitter.com/overview/documentation through the twython library https://github.com/ryanmcgrath/twython
 
 ## Contributors
-Lillian Chow
-Megan Wolf
+Lillian Chow and Megan Wolf
 
 ## License
 
