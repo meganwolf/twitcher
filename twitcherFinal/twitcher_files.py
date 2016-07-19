@@ -151,16 +151,17 @@ def filters(handle, filter=None):
 
     for x in dataCrop:
         print(x)
+
     if dataCrop == []:
-        return render_template("filters.html", tweets="This filter returned no flagged tweets from this user.")
+        dataCrop = [("This filter returned no flagged tweets from this user.", "")]
 
-    return render_template("filters.html", tweets=dataCrop, filter=filter)
-
-
-    words = '--'
-    data = dataCrop
+    words = "("
+    data = str(dataCrop)
     count = data.count(words)
-    return render_template(handle + " has been flagged " + str(count) + " time(s) for " + filter)
+    return render_template("filters.html", tweets=dataCrop, filter=filter, count=count, handle=handle)
+
+
+    #return render_template(handle + " has been flagged " + str(count) + " time(s) for " + filter)
 
 #this regex will match any combination of letters and numbers between 4 and 6 characters, followed by a - and a slug,
 #a text string the first part will get the identifier "uid", while the slug is going to be called slug
